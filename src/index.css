@@ -236,12 +236,14 @@ header {
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .header__description {
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -805,6 +807,10 @@ select {
 @media (max-width: 550px) {
   .btn__menu {
     display: block;
+  }
+
+  .nav__container {
+    padding: 16px;
   }
 
   .nav__list {
