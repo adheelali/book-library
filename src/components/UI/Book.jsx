@@ -9,18 +9,19 @@ const Book = ({ book }) => {
   const mountedRef = useRef(true)
 
   useEffect(() => {
-    const image = new Image()
-    image.src = book.url
+    window.scrollTo(0, 0);
+    const image = new Image();
+    image.src = book.url;
     image.onload = () => {
       setTimeout(() => {
         if (mountedRef.current) {
           setImg(image)
         }
       }, 400);
-    }
+    };
     return () => {
       mountedRef.current = false
-    }
+    };
   });
 
   return (
