@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import emptyCart from "../assets/empty_cart.svg";
 
@@ -10,6 +10,13 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
     });
     return price;
   };
+
+  useEffect(() => {
+    effect
+    return () => {
+      cleanup
+    };
+  }, [input]);
 
   return (
     <div id="books__body">
