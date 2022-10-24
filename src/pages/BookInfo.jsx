@@ -9,6 +9,10 @@ const BookInfo = ({ books, addToCart, cart }) => {
   const { id } = useParams();
   const book = books.find((book) => +book.id === +id);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   function addBookToCart(book) {
     addToCart(book);
   }
@@ -17,9 +21,7 @@ const BookInfo = ({ books, addToCart, cart }) => {
     return cart.find((book) => +book.id === +id);
   }
 
-  useEffect(() => {
-    window.scrollTo(0,0)
-  }, []);
+ 
 
   return (
     <div id="books__body">

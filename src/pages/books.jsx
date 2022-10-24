@@ -3,7 +3,11 @@ import Book from "../components/UI/Book";
 
 const Books = ({ books: initialBooks }) => {
   const [book, setBook] = useState(initialBooks);
-
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   function filterBooks(filter) {
     if (filter === "LOW_TO_HIGH") {
       setBook(
@@ -32,9 +36,6 @@ const Books = ({ books: initialBooks }) => {
     }
   }
 
-  useEffect(() => {
-    window.scrollTo(0,0)
-  }, []);
 
   return (
     <div id="books__body">

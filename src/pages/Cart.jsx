@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import emptyCart from "../assets/empty_cart.svg";
 
 const Cart = ({ cart, changeQuantity, removeItem }) => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+   }, []);
+
   const total = () => {
     let price = 0;
     cart.forEach((item) => {
@@ -11,12 +16,6 @@ const Cart = ({ cart, changeQuantity, removeItem }) => {
     return price;
   };
 
-  useEffect(() => {
-    effect
-    return () => {
-      cleanup
-    };
-  }, [input]);
 
   return (
     <div id="books__body">
